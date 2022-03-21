@@ -1,6 +1,6 @@
 Feature: Validate Google APIs
 
-  @AddPlace
+  @AddPlace @Regression
   Scenario Outline: Verify if place is successfully added in AddPlace API
     # Scenario: Verify if place is successfully added in AddPlace API
     Given Add Place Payload with "<Name>" ,"<Language>" and "<Address>"
@@ -17,7 +17,7 @@ Feature: Validate Google APIs
       | Maker | French   | B-101 A/2 Netherland |
       | Madam | Russian  | @23 (67) Austraila   |
 
-  @DeletePlace
+  @DeletePlace @Regression
   Scenario: Verify if delete place api is working
     Given Delete Place API payload
     When User calls "deletePlaceAPI" with "delete" http request
